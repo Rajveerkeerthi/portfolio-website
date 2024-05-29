@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>personal portfolio - website</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://kit.fontawesome.com/215f32624e.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="background">
+      <div class="header">
+        <div class="container">
+          <nav>
+            <img src="./logo.png" alt="logo" class="logo" />
+            <ul id="sidemenu">
+              <li><a href="#header">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <i class="fa-solid fa-circle-xmark " onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+          </nav>
+          <div class="header-text">
+            <div class="text">
+              <p>Web Desiner</p>
+              <h1>
+                Hi, I'm <span>Rajveer</span>, a Web Developer passionate <br />
+                about creating innovative and impactful <br />
+                Explore my work and let's collaborate on <br />
+                something amazing!
+              </h1>
+            </div>
+
+            <div class="image">
+              <img src="./image (1).png" alt="image" class="pimage" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- --------------------------------About--------------------------------------- -->
+      <div id="about">
+        <div class="container">
+          <div class="row">
+            <div class="about-col-1">
+              <img src="./AT1ZHG5S_output_0-removebg-preview.png" alt="image" />
+            </div>
+            <div class="about-col-2">
+              <h1 class="sub-title">About me</h1>
+              <p>
+                I am a dedicated Web developer with a strong background in
+                Html,Css,Javascript.I am passionate about creating webpages and
+                thrive on challenges that allow me to grow and learn.
+              </p>
+              <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">
+                  Skills
+                </p>
+                <p class="tab-links" onclick="opentab('Certifications')">
+                  Certifications
+                </p>
+                <p class="tab-links" onclick="opentab('Education')">
+                  Education
+                </p>
+              </div>
+              <div class="tab-contents active-tab" id="skills">
+                <ul>
+                  <li><span>Web Developer</span><br />Web development</li>
+                  <li>
+                    <span>UI/UX Desiner</span><br />Desining web interfaces
+                  </li>
+                  <li><span>Pyhton</span><br />Python Developer</li>
+                </ul>
+              </div>
+              <div class="tab-contents" id="Certifications">
+                <ul>
+                  <li>
+                    <span>29-04-2024</span><br />Completed Web development
+                    bootcamp By Dr.Angela Yu
+                  </li>
+                  <li>
+                    <span>29-04-2023</span><br />Python Developer by-Nasscom
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-contents" id="Education">
+                <ul>
+                  <li>
+                    <span>B.tech(2020-2024)</span><br />Sri Indu college of
+                    engineering and technology
+                  </li>
+                  <li>
+                    <span>Intermediate(2018-2020)</span><br />Sri Chaithanya
+                    junior kalasala
+                  </li>
+                  <li>
+                    <span>10th(2017-2018)</span><br />St.Marks progressive
+                    school
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- --------------------------------Services--------------------------------------- -->
+      <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>web Design</h2>
+                    <p>Crafting Visually Stunning and User-Friendly Websites</p>
+                    <a href="#">Learn more...</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>Designing Intuitive and Engaging Digital Experiences</p>
+                    <a href="#">Learn more...</a>
+                </div>
+            </div>
+        </div>
+      </div>
+      <!-- --------------------------------Contact--------------------------------------- -->
+      <div id="contact">\
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p> <i class="fa-regular fa-paper-plane"  ></i>  k.rajveer2003ra@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>   6303127028</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="./rajveer.resume1.pdf" download class="btn">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet" >
+                        <input type="text" name="Name" placeholder="Rajveer" required>
+                        <input type="text" name="Email" placeholder="k.rajveer2003ra@gmail.com" required>
+                        <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p><i class="fa-solid fa-heart"></i>  2024 Rajveer. All rights reserved.</p>
+        </div>
+      </div>
+
+    </div>
+<script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove('active-link');
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove('active-tab');
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+</script>
+<script>
+  var sidemen = document.getElementById("sidemenu");
+
+
+  function openmenu(){
+    sidemen.style.right = "0";
+  }
+  function closemenu(){
+    sidemen.style.right ="-200px";
+  }
+</script>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxiq0gwqomq2Psg7-bXMQoBtwInrl5vr9Jo9nzC9rcP9oEHiwlumpACPlFCH1YuQA6l2g/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+
+  form.addEventListener('submit', e => {
+  e.preventDefault();
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+      if (response.ok) {
+        console.log('Form submitted successfully');
+        msg.innerHTML = "Message Sent Successfully";
+        setTimeout(function(){
+          msg.innerHTML = "";
+        }, 5000);
+        form.reset();
+      } else {
+        return response.text().then(text => { throw new Error(text); });
+      }
+    })
+    .catch(error => {
+      console.error('Error!', error.message);
+      msg.innerHTML = `Error: ${error.message}`;
+    });
+});
+</script>
+</body>
+</html>
